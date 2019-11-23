@@ -1,0 +1,18 @@
+#dataset all images
+dataset/train_A/*
+dataset/train_B/*
+dataset_test/train_A/*
+dataset_test/train_B/*
+dataset_transfer/test_A/*
+dataset_transfer/.ipynb_checkpoints
+main_codes/.ipynb_checkpoints
+results/.ipynb_checkpoints
+
+#samples
+!dataset/train_A/pose000001.jpg
+!dataset/train_B/img000001.jpg
+!dataset_test/train_A/pose026044.jpg
+!dataset_test/train_B/img026044.jpg
+!dataset_transfer/test_A/pose000001.jpg
+
+checkpoints
