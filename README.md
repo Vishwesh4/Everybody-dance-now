@@ -6,7 +6,7 @@ Repositories which I took inspiration from:-
 - [nyoki-pytorch](https://github.com/nyoki-mtl/pytorch-EverybodyDanceNow) pytorch-EverybodyDanceNow
 - [pix2pixHD](https://github.com/NVIDIA/pix2pixHD)
 
-- Final Results  
+<ins>Final Results</ins>  
 ![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/output.gif)  
 
 ## Introduction
