@@ -7,7 +7,7 @@ Repositories which I took inspiration from:-
 - [pix2pixHD](https://github.com/NVIDIA/pix2pixHD)
 
 - Final Results  
-![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/sidebysidecomp.mp4)  
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/output.gif)  
 
 ## Introduction
 This project will enable the user to transfer whatever pose they want to the game character which otherwise involves a lot of finesse and experience. The network will detect those poses and will create a game character enacting those poses. In this project, I will only model and focus on generating poses for a single game character. In the paper Everybody dance now by Caroline Chan et.al[1], the group had focused on transferring the pose of a source video usually consisting of a professional dancer to a target video consisting of people with no experience in that field. I will extend it to game figures. I will also use the Openpose model and the Conditional GAN (CGAN) structure from pix2pix. However, I will not do multiple screen predictions by Generator as mentioned in paper for temporal coherence.
