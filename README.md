@@ -6,6 +6,9 @@ Repositories which I took inspiration from:-
 - [nyoki-pytorch](https://github.com/nyoki-mtl/pytorch-EverybodyDanceNow) pytorch-EverybodyDanceNow
 - [pix2pixHD](https://github.com/NVIDIA/pix2pixHD)
 
+- Final Results  
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/sidebysidecomp.mp4)  
+
 ## Introduction
 This project will enable the user to transfer whatever pose they want to the game character which otherwise involves a lot of finesse and experience. The network will detect those poses and will create a game character enacting those poses. In this project, I will only model and focus on generating poses for a single game character. In the paper Everybody dance now by Caroline Chan et.al[1], the group had focused on transferring the pose of a source video usually consisting of a professional dancer to a target video consisting of people with no experience in that field. I will extend it to game figures. I will also use the Openpose model and the Conditional GAN (CGAN) structure from pix2pix. However, I will not do multiple screen predictions by Generator as mentioned in paper for temporal coherence.
 
@@ -28,30 +31,30 @@ The pose estimation was successfully done by using the Openpose algorithm develo
 
 We have used the following architecture called pix2pix which is a type of CGAN developed by NVIDEA for the purpoe of transforming the image from one domain to another. Using this step we successfully obtain g(x).  
 
-![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img2.png)
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img2.png)  
 
 ## Results
-- <u>Training Loss curve</u>
-The training is done stochasitcally
-![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img3.png)
+- <ins>Training Loss curve</ins>  
+The training is done stochasitcally  
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img3.png)  
 
-- <u>Cross validation Results</u>
-The model was tested on cross-validation set of 112 samples. We get the following results
-![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img4.png)
-Generated images on cross validation set
-![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img5.png)
+- <ins>Cross validation Results</ins>  
+The model was tested on cross-validation set of 112 samples. We get the following results  
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img4.png)  
+Generated images on cross validation set  
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img5.png)  
 
-- <u>Test Results</u>
-![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img6.png)
+- <ins>Test Results</ins>  
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img6.png)  
 
-- <u>Negetive results</u>
-![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img7.png)
+- <ins>Negetive results</ins>  
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img7.png)  
   1. The star was not printed on the t-shirt
   2. Overlap of hand was not registered
   3. Due to incomplete pose estimation, the generated image has a missing hand
 
-- <u>Initial learning</u>
-![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img8.png)
+- <ins>Initial learning</ins>  
+![Alttext](https://raw.github.com/Vishwesh4/Everybody-dance-now/master/images/img8.png)  
 
   We wanted to see how the pix2pix model starts to learn:  
   Observations:
@@ -86,7 +89,7 @@ If your train_A contains images with multiple classes please follow the instruct
 Once the data pipeline is setup, run `main codes/Main_Training_step2.ipynb`. The results can be found in `checkpoints/Pose_Game` directory.
 
 ### Testing
-Cross validation can be performed by putting images and its label in the `dataset_test` directory. Once setup, run `main codes/Main_Test_step3.ipynb`. Its results can be observed in `checkpoints\Pose_Game_test`. To perform transfer given labels, put all the labels in `dataset_transfer\test_A` folder and run `main codes/Pose_Transfer_step4.ipynb`. The results can be observed in `results/Pose_Game`
+Cross validation can be performed by putting images and its label in the `dataset_test` directory. Once setup, run `main codes/Main_Test_step3.ipynb`. Its results can be observed in `checkpoints/Pose_Game_test`. To perform transfer given labels, put all the labels in `dataset_transfer/test_A` folder and run `main codes/Pose_Transfer_step4.ipynb`. The results can be observed in `results/Pose_Game`
 
 ### Running the test files
 Before running the main code ensure that the label images are in train_A folder and the target images are in train_B folder. A single image has been left for example.  
