@@ -1,9 +1,7 @@
 # Everybody Dance Now
 This repository tries to implement [Everybody Dance Now](https://arxiv.org/abs/1808.07371) by pytorch.
 Lot of inspiration has been taken from multiple repositories. Since I was encountering some problems running their repositories, I created a rectified version of theirs with more utilities and documentation for the purpose of learning. Please get back to me if faced with any issues or bugs.  
-Repositories which I took inspiration from:-   
-- [yanx27](https://github.com/CUHKSZ-TQL/EverybodyDanceNow_reproduce_pytorch) EverybodyDanceNow reproduced in pytorch
-- [nyoki-pytorch](https://github.com/nyoki-mtl/pytorch-EverybodyDanceNow) pytorch-EverybodyDanceNow
+Repository which I took inspiration from:-   
 - [pix2pixHD](https://github.com/NVIDIA/pix2pixHD)
 
 <ins>Final Results</ins>  
